@@ -1,6 +1,6 @@
 # <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
 
-> My module
+> My module description
 
 
 ## Install
@@ -13,10 +13,10 @@ $ npm install --save <%= moduleName %>
 ## Usage
 
 ```js
-const <%= camelModuleName %> = require('<%= moduleName %>');
+import <%= camelModuleName %> from '<%= moduleName %>';
 
-<%= camelModuleName %>('unicorns');
-//=> 'unicorns & rainbows'
+<%= camelModuleName %>();
+//=> output
 ```
 
 
