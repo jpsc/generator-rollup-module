@@ -1,0 +1,44 @@
+{
+  "name": "generator-rollup-module",
+  "version": "0.1.0",
+  "description": "Scaffold a module using rollup bundler",
+  "license": "MIT",
+  "author": {
+    "name": "João Carmona",
+    "email": "jpc@mm.st"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "boilerplate",
+    "scaffold",
+    "module"
+  ],
+  "dependencies": {
+    "humanize-url": "^1.0.1",
+    "normalize-url": "^1.2.0",
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "^0.22.1"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "pify": "^2.2.0",
+    "xo": "*",
+    "yeoman-assert": "^2.0.0",
+    "yeoman-test": "^1.0.0"
+  },
+  "xo": {
+    "esnext": true,
+    "ignores": [
+      "app/templates/**"
+    ]
+  }
+}
