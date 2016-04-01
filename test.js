@@ -8,7 +8,7 @@ let generator;
 
 test.beforeEach(async () => {
 	await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
-	generator = helpers.createGenerator('nm:app', ['../app'], null, {skipInstall: true});
+	generator = helpers.createGenerator('rollup-module:app', ['../app'], null, {skipInstall: true});
 });
 
 test.serial('generates expected files', async () => {
@@ -26,7 +26,8 @@ test.serial('generates expected files', async () => {
 		'.gitattributes',
 		'.gitignore',
 		'.travis.yml',
-		'index.js',
+		'lib/index.js',
+		'lib/utils.js',
 		'license',
 		'package.json',
 		'readme.md',
@@ -39,7 +40,6 @@ test.serial('nyc option', async () => {
 		moduleName: 'test',
 		githubUsername: 'test',
 		website: 'test.com',
-		cli: false,
 		nyc: true
 	});
 
@@ -47,6 +47,6 @@ test.serial('nyc option', async () => {
 
 	assert.fileContent('.gitignore', /\.nyc_output/);
 	assert.fileContent('.gitignore', /coverage/);
-	assert.fileContent('package.json', /"xo && nyc ava"/);
 	assert.fileContent('package.json', /"nyc":/);
+	assert.fileContent('package.json', /nyc ava/);
 });
