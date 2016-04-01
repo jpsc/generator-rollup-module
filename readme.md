@@ -1,5 +1,7 @@
 # generator-rollup-module
 
+Yeoman generator for a new module using rollup bundling.
+
 Inspired on [rollup starter project](https://github.com/rollup/rollup-starter-project), based on [sindre's generator-nm](https://github.com/sindresorhus/generator-nm).
 
 
