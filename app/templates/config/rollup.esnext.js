@@ -1,6 +1,8 @@
-import config from './rollup';
+import nodeResolve from 'rollup-plugin-node-resolve';
 
-config.format = 'es6';
-config.dest = 'dist/<%= moduleName %>.js';
-
-export default config;
+export default {
+	entry: 'lib/index.js',
+	plugins: [nodeResolve({jsnext: true})],
+	format: 'es6',
+	dest: 'dist/<%= moduleName %>.js'
+};

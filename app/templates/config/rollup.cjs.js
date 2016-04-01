@@ -1,6 +1,9 @@
-import config from './rollup';
+import babel from 'rollup-plugin-babel';
+import nodeResolve from 'rollup-plugin-node-resolve';
 
-config.format = 'cjs';
-config.dest = 'dist/<%= moduleName %>.cjs.js';
-
-export default config;
+export default {
+	entry: 'lib/index.js',
+	plugins: [babel({presets: ['es2015-rollup']}), nodeResolve({jsnext: true})],
+	format: 'cjs',
+	dest: 'dist/<%= moduleName %>.cjs.js'
+};
