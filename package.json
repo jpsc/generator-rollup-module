@@ -1,6 +1,6 @@
 {
   "name": "generator-rollup-module",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Scaffold a module using rollup bundler",
   "license": "MIT",
   "author": {
