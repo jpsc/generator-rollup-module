@@ -6,10 +6,9 @@ const _s = require('underscore.string');
 
 module.exports = yeoman.Base.extend({
 	init() {
-		const cb = this.async();
 		const self = this;
 
-		this.prompt([{
+		return this.prompt([{
 			name: 'moduleName',
 			message: 'What do you want to name your module?',
 			default: this.appname.replace(/\s/g, '-'),
@@ -30,7 +29,7 @@ module.exports = yeoman.Base.extend({
 			message: 'Do you need code coverage?',
 			type: 'confirm',
 			default: false
-		}], props => {
+		}]).then(props => {
 			const tpl = {
 				moduleName: props.moduleName,
 				camelModuleName: _s.camelize(props.moduleName),
@@ -55,8 +54,6 @@ module.exports = yeoman.Base.extend({
 			mv('gitignore', '.gitignore');
 			mv('travis.yml', '.travis.yml');
 			mv('_package.json', 'package.json');
-
-			cb();
 		});
 	},
 	git() {
