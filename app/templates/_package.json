@@ -13,7 +13,7 @@
   "jsnext:main": "dist/<%= moduleName %>.js",
   "scripts": {
     "build": "rollup -c config/rollup.cjs.js && rollup -c config/rollup.esnext.js",
-    "pretest": "rollup -c config/rollup.test.js",
+    "pretest": "rollup -c config/rollup.pretest.js",
     "test": "xo !build/test.js && <% if (nyc) { %>nyc <% } %>ava build/test.js",
     "prepublish": "npm run build && npm test"
   },
