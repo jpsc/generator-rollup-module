@@ -24,12 +24,12 @@
   ],
   "dependencies": {
     "humanize-url": "^1.0.1",
-    "normalize-url": "^1.2.0",
+    "normalize-url": "1.6.1",
     "underscore.string": "^3.0.3",
     "yeoman-generator": "0.24.1"
   },
   "devDependencies": {
-    "ava": "*",
+    "ava": "0.16.0",
     "pify": "^2.2.0",
     "xo": "*",
     "yeoman-assert": "^2.0.0",
