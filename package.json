@@ -31,7 +31,7 @@
   "devDependencies": {
     "ava": "0.17.0",
     "pify": "2.3.0",
-    "xo": "0.17.1",
+    "xo": "0.18.2",
     "yeoman-assert": "2.2.1",
     "yeoman-test": "1.6.0"
   },
